@@ -1,1 +1,532 @@
-11111111111111111
+
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+<head>
+    <meta charset="utf-8">
+    <title>橙子视频--首页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+
+    <link rel="stylesheet" href="/css/Hui.css">
+    <script src="http://lib.baomitu.com/jquery/2.2.4/jquery.min.js"></script>
+    <script src="http://www.17sucai.com/preview/84411/2017-09-30/widget/script/H.js"></script>
+    <script src="http://lib.baomitu.com/angular.js/1.7.0-rc.0/angular.min.js"></script>
+    <link rel="stylesheet" href="http://www.17sucai.com/preview/1/2017-10-10/banner/css/swiper.min.css">
+<style>
+*{
+    padding: 0;
+    margin:0;
+}
+a{
+    text-decoration: none;
+}
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.pc-banner {
+    
+    width: 100%;
+    float: left;
+}
+
+@media screen and (max-width: 668px) {
+    .pc-banner {
+        background-size: auto 100%;
+    }
+}
+
+.swiper-container {
+    width: 100%;
+    margin: 35px 0;
+}
+
+@media screen and (max-width: 668px) {
+    .swiper-container {
+        margin: 20px 0 15px;
+    }
+}
+
+.swiper-slide {
+    -webkit-transition: transform 1.0s;
+    -moz-transition: transform 1.0s;
+    -ms-transition: transform 1.0s;
+    -o-transition: transform 1.0s;
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
+}
+
+@media screen and (max-width: 668px) {
+    .swiper-slide {
+        -webkit-transform: scale(0.97);
+        transform: scale(0.97);
+    }
+}
+
+.swiper-slide-active,.swiper-slide-duplicate-active {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+@media screen and (max-width: 668px) {
+    .swiper-slide-active,.swiper-slide-duplicate-active {
+        -webkit-transform: scale(0.97);
+        transform: scale(0.97);
+    }
+}
+
+.none-effect {
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+}
+
+.swiper-slide a {
+    background: #fff;
+    padding:10px;
+    display: block;
+    border-radius: 14px;
+}
+
+@media screen and (min-width: 668px) {
+    .swiper-slide a:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        box-sizing: border-box;
+        border: 10px solid #fff;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: url(/img/top_slick_cover_bg01.png) 0 0 repeat;
+        border-radius: 20px;
+    }
+}
+
+.swiper-slide-active a:after {
+    background: none;
+}
+
+@media screen and (max-width: 668px) {
+    .swiper-slide a {
+        padding: 5px;
+        border-radius: 7px;
+    }
+}
+
+.swiper-slide img {
+    width: 100%;
+    border-radius: 14px;
+    display: block;
+    height: 170px;
+    
+}
+
+@media screen and (max-width: 668px) {
+    .swiper-slide img {
+        border-radius: 7px;
+    }
+}
+
+.swiper-pagination {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.swiper-pagination-bullet {
+    background: #00a0e9;
+    margin-left: 4px;
+    margin-right: 4px;
+    width: 17px;
+    height: 17px;
+    opacity: 1;
+    margin-bottom: 4px;
+}
+
+.swiper-pagination-bullet-active {
+    width: 13px;
+    height: 13px;
+    background: #FFF;
+    border: 6px solid #00a0e9;
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 668px) {
+    
+    .swiper-pagination {
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    .swiper-pagination-bullet {
+        background: #00a0e9;
+        margin-left: 2px;
+        margin-right: 2px;
+        width: 8px;
+        height: 8px;
+        margin-bottom: 2px;
+    }
+
+    .swiper-pagination-bullet-active {
+        width: 6px;
+        height: 6px;
+        background: #FFF;
+        border: 3px solid #00a0e9;
+        margin-bottom: 0;
+    }
+}
+
+.button {
+    width: 1000px;
+    margin: 0 auto;
+    bottom: 43px;
+    position: relative;
+}
+
+@media screen and (max-width: 668px) {
+    .button {
+        width: 70%;
+        bottom: 22px;
+    }
+}
+
+.button div:hover {
+    background-color: #2f4798;
+}
+
+
+
+@media screen and (max-width: 668px) {
+    .button div {
+        width: 28px;
+        height: 28px;
+    }
+}   
+    
+.homelie{
+    width: 100%;
+}
+.homeliediv{
+    width: 46%;
+    float: left;
+    padding:1% 2%;
+    position: relative;
+}
+.homeliediv img{
+    width: 100%;
+    height: 130px;
+    border-radius: 5px;
+}
+.homeliebiaoti{
+    height: 38px;
+    width: 95%;
+    text-align: center;
+    color: white;
+    font-size: 13px;
+    overflow: hidden;
+}
+
+
+.H-header-title{
+    color:rgba(255,169,111,0);
+    font-family: Georgia, serif;
+}
+
+.bgimg{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    z-index: -10;
+    left: 0px;
+}
+.header_back{
+    width: 35px;
+    margin-top: 5px;
+}
+.toubu{
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 10;
+    
+}
+
+</style>
+</head>
+
+
+<body ng-controller="Main as main">
+<img src="" class="bgimg" id="bj_id">
+<div class="toubu">
+    <header class="H-header" id="header">
+        <div class="index_title H-header-title H-center-all H-font-size-18 H-text-show-row-1 H-theme-font-color-white H-position-absolute H-width-100-percent">橙子视频</div>
+    </header>
+</div>
+
+
+<!-- Swiper -->
+ <section class="pc-banner">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+                <div ng-click="main.bofang(main.selunbodata['0'].url,main.selunbodata['0'].img,main.selunbodata['0'].title,main.selunbodata['0'].type)" class="swiper-slide swiper-slide-center none-effect"><a href="#"><img src="{{main.selunbodata['0'].img}}" ></a></div>
+
+                <div ng-click="main.bofang(main.selunbodata['1'].url,main.selunbodata['1'].img,main.selunbodata['1'].title,main.selunbodata['1'].type)" class="swiper-slide"><a href="#"><img src="{{main.selunbodata['1'].img}}" ></a></div>
+
+                <div ng-click="main.bofang(main.selunbodata['2'].url,main.selunbodata['2'].img,main.selunbodata['2'].title,main.selunbodata['2'].type)" class="swiper-slide"><a href="#"><img src="{{main.selunbodata['2'].img}}" ></a></div>
+
+                <div ng-click="main.bofang(main.selunbodata['3'].url,main.selunbodata['3'].img,main.selunbodata['3'].title,main.selunbodata['3'].type)" class="swiper-slide"><a href="#"><img src="{{main.selunbodata['3'].img}}" ></a></div>
+
+                <div ng-click="main.bofang(main.selunbodata['4'].url,main.selunbodata['4'].img,main.selunbodata['4'].title,main.selunbodata['4'].type)" class="swiper-slide"><a href="#"><img src="{{main.selunbodata['4'].img}}" ></a></div>
+        </div>
+        
+    </div>
+    <div class="swiper-pagination"></div>
+    
+</section>
+
+
+
+
+
+
+
+<!-- 首页 -->
+        <div class="homediv animated bounceInDown "   ng-cloak>
+            <div class="zonglie" ng-repeat="(key, val) in main.shouyedata">
+                <div class="H-channel-title H-flexbox-horizontal  H-vertical-middle ">
+                    <div class="H-channel-line H-theme-background-color4 H-padding-vertical-top-15 H-padding-horizontal-left-3  H-margin-horizontal-left-10"></div>
+                    <div class="H-channel-text H-theme-font-color4 H-flex-item H-font-size-18 H-theme-font-color-black H-padding-10 H-margin-horizontal-right-10 H-text-show-row-1">{{val.name}}</div>
+                    <span class="H-icon H-padding-horizontal-right-5 H-display-block"><i class="fa fa-angle-double-right H-theme-font-color-ccc H-font-size-14 H-vertical-middle"></i></span>
+                </div>
+
+                <div class="homelie" ng-repeat="(key, value) in val.data" ng-click="main.bofang(value.url,value.img,value.name,value.type)">
+                    <div class="homeliediv">
+                        <img src="{{value.img}}" class="homelie_img" />
+                        <div class="homeliebiaoti">{{value.name}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+<!-- 底部导航 -->
+<footer class="H-footer H-flexbox-horizontal H-theme-background-color-white " id="footer" style="position: fixed;bottom: 0px;z-index: 120;background-color: rgba(255,255,255,0.8)!important;height: 45px;">
+    <div class="H-flex-item H-center-all H-text-align-center H-theme-font-color-999"><a href="/index.html" target="_parent" style="color: #999;">
+        <div>
+            <span class="H-icon H-display-block H-line-height-normal" style="height: 25px;"><img src="/img/index_home.png" style="width: 25px;"></span>
+            <strong class="H-font-size-11 H-display-block H-font-weight-normal" style="color: #FF5F71;">主页</strong>
+        </div></a>
+    </div>
+    <div class="H-flex-item H-center-all H-text-align-center  H-theme-font-color-999"><a href="/xiaoluoli.html" target="_parent" style="color: #999;">
+        <div>
+            <span class="H-icon H-display-block H-line-height-normal" style="height: 25px;"><img src="/img/index_luoli.png" style="width: 25px;"></span>
+            <strong class="H-font-size-11 H-display-block H-font-weight-normal">小萝莉</strong>
+        </div></a>
+    </div>
+    <div class="H-flex-item H-center-all H-text-align-center  H-theme-font-color-999"><a href="/gongneng.html" target="_parent" style="color: #999;">
+        <div>
+            <span class="H-icon H-display-block H-line-height-normal" style="height: 25px;"><img src="/img/index_gongneng.png" style="width: 25px;"></span>
+            <strong class="H-font-size-11 H-display-block H-font-weight-normal">功能</strong>
+        </div></a>
+    </div>
+    <div class="H-flex-item H-center-all H-text-align-center  H-theme-font-color-999"><a href="/my.html" target="_parent" style="color: #999;">
+        <div>
+            <span class="H-icon H-display-block H-line-height-normal" style="height: 25px;"><img src="/img/index_my.png" style="width: 25px;"></span>
+            <strong class="H-font-size-11 H-display-block H-font-weight-normal">我的</strong>
+        </div></a>
+    </div>
+</footer>
+
+
+<!-- 设置背景 -->
+<script>
+if (localStorage.bgimg) {
+    document.getElementById('bj_id').src=localStorage.bgimg;
+}else{
+    localStorage.bgimg = '/img/bj/bj1.jpg';
+    document.getElementById('bj_id').src='/img/bj/bj1.jpg';
+}
+</script>
+
+
+
+
+
+<script>
+var myapp=angular.module('myapp', [])
+myapp.controller('Main',['$http',function($http,$scope,$timeout){
+    var self=this;
+
+
+
+
+    // 默认初始或设置
+
+    // 轮播数据
+    self.selunbodata=angular.fromJson('[{ "img": "http://wx4.sinaimg.cn/mw690/006duL7rgy1ffh6nprl48g30a005qhdt.gif", "url": "https://cdn-1.porn87.com/media/video_1/c38kfsov95l16bnuetwya07gjx4ph2.mp4", "title": "她的姐姐，诱惑妹妹的男朋友", "type": "ok" }, { "img": "http://wx3.sinaimg.cn/mw690/9d8425b8gy1fne5ftd3nrg20bv07ykjn.gif", "url": "https://hls1.gslb.ru/hls/Cen/KAWD-758.mp4/index.m3u8", "title": "美少女铃木心春街头霸王cos春丽", "type": "ok" }, { "img": "http://wx2.sinaimg.cn/mw690/006MFC2Jgy1fhj3q84kiyg30go0964qs.gif", "url": "https://hls1.gslb.ru/hls/Cen/IBW-248.mp4/index.m3u8", "title": "公园公共厕所少女强奸", "type": "ok" }, { "img": "http://cdn.fds.api.xiaomi.com/b2c-bbs/cn/attachment/ecf43d29aef0f8eb82e28b4cdd1887eb.gif", "url": "https://hls3.gslb.ru/hls/Cen/SNIS-850.mp4/index.m3u8", "title": "国民女神换装", "type": "ok" }, { "img": "https://i.866315.com/media/cover/320x200/SQTE-200.jpg", "url": "https://hls1.gslb.ru/hls/Cen/SQTE-200.mp4/index.m3u8", "title": "超漂亮的美少女", "type": "ok" }]');
+    console.log(self.selunbodata);
+
+    // 轮播数据
+    self.shouyedata=angular.fromJson('[{ "name": "国内推荐", "data": [{ "img": "https://bycdn01.weilekangnet.com:59666/data3/9E4B68A9C673D934/5EB89E9676924111/pic.jpg", "name": "小萝莉写完作业用圆珠笔插到自己喷水", "url": "https://bycdn01.weilekangnet.com:59666/data3/9E4B68A9C673D934/5EB89E9676924111/index.m3u8", "type": "ok" }, { "img": "https://bycdn01.weilekangnet.com:59666/data2/DEDA727BFC130621/7B5844BAC2B48515/pic.jpg", "name": "超級巨乳高中生宿舍直播", "url": "https://bycdn01.weilekangnet.com:59666/data2/DEDA727BFC130621/7B5844BAC2B48515/index.m3u8", "type": "ok" }, { "img": "https://bycdn01.weilekangnet.com:59666/data2/DEDA727BFC130621/77556E1A90BF56E9/pic.jpg", "name": "疑似莉哥流出40分钟完整视频", "url": "https://bycdn01.weilekangnet.com:59666/data2/DEDA727BFC130621/77556E1A90BF56E9/index.m3u8", "type": "ok" }, { "img": "https://bycdn01.weilekangnet.com:59666/data3/9E4B68A9C673D934/AB4B44809E5A3525/pic.jpg", "name": "爸爸你怎么进来了", "url": "https://bycdn01.weilekangnet.com:59666/data3/9E4B68A9C673D934/AB4B44809E5A3525/index.m3u8", "type": "ok" }, { "img": "https://bycdn01.weilekangnet.com:59666/data3/9E4B68A9C673D934/7B375967B0C7E961/pic.jpg", "name": "青春少女初音再度來襲全裸自慰道具大秀", "url": "https://bycdn01.weilekangnet.com:59666/data3/9E4B68A9C673D934/7B375967B0C7E961/index.m3u8", "type": "ok" }, { "img": "https://bycdn01.weilekangnet.com:59666/data3/9E4B68A9C673D934/73BA0BA84AC39A5A/pic.jpg", "name": "真实操了没几根毛的小表妹", "url": "https://bycdn01.weilekangnet.com:59666/data3/9E4B68A9C673D934/73BA0BA84AC39A5A/index.m3u8", "type": "ok" }, { "img": "https://bycdn01.weilekangnet.com:59666/data2/DEDA727BFC130621/6D9C0C9A1D5D403D/pic.jpg", "name": "高顏值長相清純萌妹子KIKI第二部", "url": "https://bycdn01.weilekangnet.com:59666/data2/DEDA727BFC130621/6D9C0C9A1D5D403D/index.m3u8", "type": "ok" }, { "img": "https://bycdn01.weilekangnet.com:59666/data3/9E4B68A9C673D934/EE7A89EECA1CD3EE/pic.jpg", "name": "極品尤物萌白醬VIP付費之超短白色旗袍正宗無毛饅頭逼", "url": "https://bycdn01.weilekangnet.com:59666/data3/9E4B68A9C673D934/EE7A89EECA1CD3EE/index.m3u8", "type": "ok" }, { "img": "https://bycdn01.weilekangnet.com:59666/data3/9E4B68A9C673D934/7E5F4B341DB3E181/pic.jpg", "name": "清純嫩妹粉穴噴水水", "url": "https://bycdn01.weilekangnet.com:59666/data3/9E4B68A9C673D934/7E5F4B341DB3E181/index.m3u8", "type": "ok" }, { "img": "https://bycdn01.weilekangnet.com:59666/data3/9E4B68A9C673D934/BA276CC610494543/pic.jpg", "name": "公子哥私約藝校極品正妹無套內射幹到她都哭了", "url": "https://bycdn01.weilekangnet.com:59666/data3/9E4B68A9C673D934/BA276CC610494543/index.m3u8", "type": "ok" }] }, { "name": "日本AV", "data": [{ "img": "https://i.866315.com/media/cover/320x200/IPX-177.jpg", "url": "https://hls3.gslb.ru/hls/Cen/IPX-177.mp4/index.m3u8", "name": "喜欢中年的文学美少女无法动弹的状态下，会慢慢地被色女做", "type": "ok" }, { "img": "http://ww1.sinaimg.cn/large/7a82bce9jw1ezjz77fsl5g20b4068b29.jpg", "url": "https://hls3.gslb.ru/hls/Cen/TEK-071.mp4/index.m3u8", "name": "TEK-071 快感 三上悠亜", "type": "ok" }, { "img": "http://cdn.fds.api.xiaomi.com/b2c-bbs/cn/attachment/a4f11690c915e3477d1bcc11fc9e1af7.jpg", "url": "https://hls1.gslb.ru/hls/Cen/GDTM-203.mp4/index.m3u8", "name": "GDTM-203 S級娘1番可愛清楚美少女", "type": "ok" }, { "img": "http://cdn.fds.api.xiaomi.com/b2c-bbs/cn/attachment/f1f18e66ac0653cd21381f82aaf6cb15.jpg", "url": "https://hls1.gslb.ru/hls/Cen/APAK-088.mp4/index.m3u8", "name": "这个女儿，我犯了……！", "type": "ok" }, { "img": "https://i.866315.com/media/cover/320x200/SNIS-684.jpg", "url": "https://hls1.gslb.ru/hls/Cen/SNIS-684.mp4/index.m3u8", "name": "童貞君のために生乳、生尻、生マ●コ見せつけ生おかずオナニーサ", "type": "ok" }, { "img": "https://i.866315.com/media/cover/320x200/SSNI-064.jpg", "url": "https://hls1.gslb.ru/hls/Cen/SSNI-064.mp4/index.m3u8", "name": "新人NO.1STYLE 架乃ゆら 18歳 AVデビュー", "type": "ok" }] }, { "name": "韩国三级", "data": [{ "img": "https://bycdn01.weilekangnet.com:59666/data2/36CC57915BD0F843/D885988D74B05135/pic.jpg", "name": "妈妈的朋友4-中文字幕", "url": "https://bycdn01.weilekangnet.com:59666/data2/36CC57915BD0F843/D885988D74B05135/index.m3u8", "type": "ok" }, { "img": "https://bycdn01.weilekangnet.com:59666/data2/36CC57915BD0F843/50A63B112215C263/pic.jpg", "name": "性冷淡", "url": "https://bycdn01.weilekangnet.com:59666/data2/36CC57915BD0F843/50A63B112215C263/index.m3u8", "type": "ok" }, { "img": "https://bycdn01.weilekangnet.com:59666/data2/36CC57915BD0F843/25F9EF93C08D2FC6/pic.jpg", "name": "姐姐的朋友", "url": "https://bycdn01.weilekangnet.com:59666/data2/36CC57915BD0F843/25F9EF93C08D2FC6/index.m3u8", "type": "ok" }, { "img": "https://bycdn01.weilekangnet.com:59666/data2/36CC57915BD0F843/398BD21A667F9794/pic.jpg", "name": "出轨的女人-韩语中字", "url": "https://bycdn01.weilekangnet.com:59666/data2/36CC57915BD0F843/398BD21A667F9794/index.m3u8", "type": "ok" }] }, { "name": "动漫", "data": [{ "img": "https://bycdn01.weilekangnet.com:59666/data2/DEDA727BFC130621/50B1F7AF060CA383/pic.jpg", "name": "她是新娘候補生-ー第1話", "url": "https://bycdn01.weilekangnet.com:59666/data2/DEDA727BFC130621/50B1F7AF060CA383/index.m3u8", "type": "ok" }, { "img": "https://bycdn01.weilekangnet.com:59666/data2/DEDA727BFC130621/80873253C8BCBCCF/pic.jpg", "name": "淫行教師4featエロ議員センセイ靜歌＆初音", "url": "https://bycdn01.weilekangnet.com:59666/data2/DEDA727BFC130621/80873253C8BCBCCF/index.m3u8", "type": "ok" }, { "img": "https://bycdn01.weilekangnet.com:59666/data3/9E4B68A9C673D934/D258FBF0CEA86E25/pic.jpg", "name": "女忍2-落入聖殿的處女", "url": "https://bycdn01.weilekangnet.com:59666/data3/9E4B68A9C673D934/D258FBF0CEA86E25/index.m3u8", "type": "ok" }, { "img": "https://bycdn01.weilekangnet.com:59666/data2/36CC57915BD0F843/8E3406A09B7A3973/pic.jpg", "name": "爆乳母娘01", "url": "https://bycdn01.weilekangnet.com:59666/data2/36CC57915BD0F843/8E3406A09B7A3973/index.m3u8", "type": "ok" }] }]');
+
+
+    // 播放
+    this.bofang=function(url,img,title,type){
+        console.log(url);
+        H.toastLoading();
+
+
+        var timestamp = Date.parse(new Date());
+        var arr = new Object()
+        arr.img = img
+        arr.title = title
+        arr.url = url
+        arr.time = timestamp
+        arr.type = 'ok'
+
+        localStorage.Play_Data = angular.toJson(arr);
+        console.log(angular.toJson(arr));
+        if (localStorage.lishidata) {
+            localStorage.lishidata= angular.toJson(arr) + ','+ localStorage.lishidata;
+        }else{
+            localStorage.lishidata= angular.toJson(arr);
+        }
+
+        
+
+        if (type == 'ok') {
+            window.location.href='/play.html';
+        }
+
+        if (type == 'av') {
+            $http.get('http://xiguaapi.czapp1.xyz/index/g2/av_geturl/?url=' + url ).then(function(obj){
+                var c = obj.data;
+                var r = eval(c.slice(4));       
+                r = r.replace(/^\s+/, '');   
+                if (r && r.charAt(0) === '<') {
+                    r = style_html(r, 4, ' ', 80);
+                } else {
+                    r = js_beautify(r, 4, ' ');
+                }
+                console.log(r);
+                var left_int = r.indexOf("url: '") + 6;
+                var right_int = r.indexOf("expires=") +18;
+                var play_url = r.substring(left_int,right_int);
+                console.log(r.substring(left_int,right_int));
+                 H.closeToast();
+                if (play_url) {
+                    xingkong.jsAndroid('{"key":"chushiplay","value":"'+play_url +'"}');
+                }else{
+                    alert('视频解析失败！');
+                }
+            });
+        }
+
+        if (type == 'hash') {
+            $http.get('http://xiguaapi.czapp1.xyz/index/g/get_downurl/?token=' + url).then(function(obj){
+                self.cili_downurl=angular.fromJson(angular.toJson(obj.data));
+                console.log(self.cili_downurl);
+                H.closeToast();
+                if (self.cili_downurl.msg == 'success') {
+                    xingkong.jsAndroid('{"key":"chushiplay","value":"'+self.cili_downurl.downurl +'"}');
+                }else{
+                    alert('该磁力视频不能云播！')
+                }
+            });
+        }
+
+        if (type == 'tiao') {
+            xingkong.jsAndroid('{"key":"tiaozhuan","value":"'+url +'"}');
+
+        }
+
+
+
+        
+
+    }
+
+    
+
+}])
+</script>
+
+
+
+
+<!-- Swiper JS -->
+    <script src="http://www.17sucai.com/preview/1/2017-10-10/banner/js/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+    window.onload = function() {
+    var swiper = new Swiper('.swiper-container',{
+        autoplay:3000,
+        speed:1000,
+        autoplayDisableOnInteraction : false,
+        loop:true,
+        centeredSlides : true,
+        slidesPerView:2,
+        pagination : '.swiper-pagination',
+        paginationClickable:true,
+        prevButton:'.swiper-button-prev',
+        nextButton:'.swiper-button-next',
+        onInit:function(swiper){
+            swiper.slides[2].className="swiper-slide swiper-slide-active";//第一次打开不要动画
+            },
+        breakpoints: { 
+                668: {
+                    slidesPerView: 1,
+                 }
+            }
+        });
+        }
+    </script>
+
+
+<!-- 滚动监听 -->
+<script>
+$(document).ready(function(){
+    $(window).scroll(function(){//开始监听滚动条
+        //获取当前滚动条高度
+        var topp = $(document).scrollTop();
+        console.log(topp);
+
+        shu=topp*0.003;
+        if (shu > 0.8) {
+            shu = 0.8;
+        }
+        $('.toubu').css({'cssText': 'background:rgba(255,255,255,'+shu+')!important;'});
+        $('.index_title').css({'cssText': 'color:rgba(255,169,111,'+ (topp*0.003) +')!important;'});
+        
+        if (topp>100) {
+            $('.H-header').css({'cssText': 'box-shadow: rgba(255,255,255, 0.22) 0px 2px 6px, rgba(255,255,255,0.34) 0px 1px 2px;'});
+        }else{
+            $('.H-header').css({'cssText': 'box-shadow: rgba(255,255,255, 0) 0px 2px 6px, rgba(255,255,255, 0) 0px 1px 2px;'});
+        }
+        
+
+
+
+    })
+
+})
+</script>
+
+
+
+
+
+</body>
+
+
+<script type="text/javascript" src="https://js.users.51.la/19018612.js"></script>
+</html>
